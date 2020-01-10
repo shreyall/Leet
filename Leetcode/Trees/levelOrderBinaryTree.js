@@ -1,7 +1,7 @@
 // LEETCODE MEDIUM ( 102 )
 
 //level order traversal (breadth first search) of a binary tree
-
+// used a queue to implement breadth first search
 const levelOrder = root => {
   if (root === null) return [];
   let results = [];
