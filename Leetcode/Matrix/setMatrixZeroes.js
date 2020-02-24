@@ -28,6 +28,9 @@ const setZeroes = matrix => {
   console.log(matrix);
 };
 
+// try to optimize space, using labels.
+const setZeroes = matrix => {};
+
 let arr = [
   [0, 1, 2, 0],
   [3, 4, 5, 2],
