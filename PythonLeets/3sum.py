@@ -1,8 +1,11 @@
 def threeSum(nums):
     nums.sort()
-    result, i = [], 0
+    result, i, prev = [], 0, float('inf')
     while i < len(nums)-1:
         l, r = i+1, len(nums)-1
+        if(nums[i] == prev):
+            i += 1
+            continue
         while(l < r):
             temp = nums[l]+nums[r]+nums[i]
             if(temp == 0):
@@ -12,12 +15,11 @@ def threeSum(nums):
                     l += 1
                 while(r > l and nums[r] == nums[r+1]):
                     r -= 1
-                while(i < len(nums)-1 and nums[i+1] == nums[i]):
-                    i += 1
             elif(temp < 0):
                 l += 1
             else:
                 r -= 1
+        prev = nums[i]
         i += 1
     return result
 
